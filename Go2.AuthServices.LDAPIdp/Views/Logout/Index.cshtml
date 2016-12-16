@@ -1,0 +1,8 @@
+﻿@{
+    var queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
+}
+
+@using (Html.BeginForm("RespondToLogoutRequest", "Logout", queryStringDictionary, FormMethod.Post))
+{
+    <button id="submit">Log out</button>    
+}

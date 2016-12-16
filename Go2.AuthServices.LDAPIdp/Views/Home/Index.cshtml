@@ -1,0 +1,22 @@
+﻿@model HomePageModel
+
+@{
+    var queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
+}
+
+@using (Html.BeginForm("Index", "Home", queryStringDictionary, FormMethod.Post))
+{    
+    @Html.ValidationSummary()
+
+    <div class="hide-details">
+        @Html.LabelFor(m => m.Username)
+        @Html.EditorFor(m => m.Username)
+        @Html.ValidationMessageFor(m => m.Username)
+    </div>
+    <div class="hide-details">
+        @Html.LabelFor(m => m.Password)
+        @Html.EditorFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+    <button id="submit">Log in</button>
+}
