@@ -29,8 +29,7 @@ at all (even though [providing an own ClaimsAuthenticationManager](doc/ClaimsAut
 for claims translation is highly recommended).
 
 ## Stub Idp
-The solution also contains a stub (i.e. dummy) identity provider that can be used for testing.
-Download the solution, or use the instance that's provided for free at http://stubidp.kentor.se.
+The solution also contains a stub (i.e. dummy) identity provider that can be used for testing. Download the solution.
 
 ## Protocol Classes
 The protocol handling classes are available as a public API as well, making it possible to 
